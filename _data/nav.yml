@@ -1,0 +1,8 @@
+- name: About
+  link: "/about"
+- name: Blog
+  link: "/blog"
+- name: Niceties
+  link: "/niceties"
+- name: Reminiscence
+  link: "/reminiscence"
