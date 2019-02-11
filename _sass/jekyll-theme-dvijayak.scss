@@ -24,6 +24,8 @@ body {
 }
 
 .navbar {
+	border-bottom: 1px solid #B2D2E1; // TODO: variables
+
 	.navbar-brand {
 		color: $blue;
 		text-shadow: $navbar-brand-text-shadow;
@@ -44,4 +46,11 @@ main {
 footer {
 	padding: 20px 0 0;
 	color: #ccc; // TODO: Move this to variable
+}
+
+pre {
+	background-color: $gray-800;
+
+	white-space: pre-wrap;
+	overflow-x: auto;
 }
