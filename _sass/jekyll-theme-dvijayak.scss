@@ -1,0 +1,47 @@
+// ---------- BOOTSTRAP ----------
+
+$body-bg: #6C7989;
+
+$primary: #C6EAFA;
+$secondary: #DEDEDE;
+
+$blue: #069;
+
+$enable-shadows: true;
+
+// Import bootstrap at the end in order to override default variables
+@import "bootstrap/bootstrap";
+
+// ---------- DVIJAYAK ----------
+
+$main-border-radius: 8px !default;
+$main-box-shadow: rgba($black, 0.2) 0 0 0 1px, rgba($black, 0.45) 0 3px 10px;
+
+$navbar-brand-text-shadow: rgba(#fff, 0.9) 0 1px 0 !default;
+
+body {
+	padding-top: 5rem;
+}
+
+.navbar {
+	.navbar-brand {
+		color: $blue;
+		text-shadow: $navbar-brand-text-shadow;
+	}
+}
+
+main {
+	background-color: $secondary;
+
+	@include border-radius($main-border-radius);
+	@include box-shadow($main-box-shadow);
+
+	.content {
+		padding: 3rem 1.5rem;
+	}
+}
+
+footer {
+	padding: 20px 0 0;
+	color: #ccc; // TODO: Move this to variable
+}

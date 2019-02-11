@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 3.5" # shouldn't be the latest, due to github-pages compatibility
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.0'
+  spec.add_runtime_dependency 'jekyll-autoprefixer', '~> 1.0'
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 12.0"

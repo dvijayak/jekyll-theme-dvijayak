@@ -4,16 +4,18 @@ title: Domino et nec manibus grata flectitur servat
 tags: [one, two, three, four, infinity]
 ---
 
-Lorem markdownum regesta referebat humo inplevit suis; *huic* qui mihi erratica.
+> Lorem markdownum regesta referebat humo inplevit suis; *huic* qui mihi erratica.
 Nam relictis terris. *Laqueosque matris*? Mea deum a pondere membra, iussorum ad
 fugit per, certamina?<!--excerpt-->
 
+``` javascript
     var dashboard_trackball_scan = software;
     utf_num_alert(deprecatedPacketFile(hdv_ibm(row_gps, 5)), fifoEncodingWebsite
             * variableEsports(-2, vdsl_sdsl_kindle));
     if (boxVideo(web - duplex) + characterTag(us_dock, 5) + -1) {
         oemEncryptionUnix(cybercrime);
     }
+```
 
 ## Viventi diu incoquit trahuntur guttura aures vestros
 
@@ -50,6 +52,6 @@ Parnasi lacerto coronas, et ac Arethusa. Inpune regia et, tribuitque de aliquid
 fratri. **Una quae nona** ut querenti duxere ut cum libidine iussere. Turba et
 non candore, ab moriere est longumque ratem coloni potest starent ingentia.
 
-Duo faciem oculis. Est quo Dixerat: spreto et **suis** patriaque iura: eris.
+> Duo faciem oculis. Est quo Dixerat: spreto et **suis** patriaque iura: eris.
 Mihi [nostri et](http://quod-quis.io/iamdudum) occuluit dixit. Quicumque *adsere
 nequiquam genusque* distabat!

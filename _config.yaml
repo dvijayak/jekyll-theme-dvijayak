@@ -1,9 +1,16 @@
 title: dvijayak.net
+subtitle: wearing my heart on my sleeve
 description: Theme used by dvijayak.net
 
 theme: jekyll-theme-dvijayak
-layout: default
 
 markdown: kramdown
 excerpt_separator: <!--excerpt-->
 
+plugins:
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: true
