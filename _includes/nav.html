@@ -1,13 +1,16 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
-	<a class="navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
-	<!-- TODO: Use site description/subtitle, just like modernist theme -->
+	<a class="navbar-brand text-navbar-brand" href="/">{{ site.title | default: site.github.repository_name }}</a>
+
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
 	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		<ul class="navbar-nav mr-auto">
+	{% if site.subtitle %}
+		<small class="navbar-text subtitle font-italic">{{ site.subtitle | default: site.github.project_tagline }}</small>
+	{% endif %}
+		<ul class="navbar-nav ml-auto">
 		{% for item in site.data.nav %}
 			<li class="nav-item">
 				{% assign link_with_ext = item.link | append: ".html" %}
@@ -15,6 +18,7 @@
 			</li>
 		{% endfor %}
 		</ul>
+
 		<!-- TODO: Implement Search when we have a search provider -->
 		<!-- <form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

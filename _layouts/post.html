@@ -2,12 +2,20 @@
 layout: base-with-title
 ---
 
-<p>
-	<em class="text-muted">Published on {{ page.date | date_to_string }}</em>
-{% if page.composed_date %}
-	<br>
-	<em>Composed on {{ page.composed_date | date_to_string }}</em>
-{% endif %}
-</p>
+<!-- <div class="d-flex justify-content-start mb-4"> -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<span class="p-2 text-muted">Published on {{ page.date | date_to_string }}</span>
+		</div>
+	{% if page.composed_date %}
+		<div class="col-lg-9 mt-3 mt-lg-0">
+			<span class="p-2 bg-dark text-white rounded">Composed on {{ page.composed_date | date_to_string }}</span>
+		</div>
+	{% endif %}
+	</div>
+</div>
+
+<hr class="mb-5">
 
 {{ content }}

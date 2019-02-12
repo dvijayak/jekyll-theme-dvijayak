@@ -14,7 +14,8 @@ Show the given list of posts.
 		<small class="text-muted">Published on {{ post.date | date: "%B %d, %Y" }}</small>
 	{% if post.tags %}	
 		<div class="float-right">
-		{% for tag in post.tags %}
+		{% assign sorted_tags = post.tags | sort %}
+		{% for tag in sorted_tags %}
 			<!-- TODO: Tag page URL -->
 			<a href="#" class="badge badge-primary text-color-blue">{{ tag }}</a>
 		{% endfor %}
