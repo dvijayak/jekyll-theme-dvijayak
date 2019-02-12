@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-dvijayak"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Daniel Vijayakumar"]
   spec.email         = ["daniel.vkumar@gmail.com"]
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 3.5" # shouldn't be the latest, due to github-pages compatibility
+  spec.add_runtime_dependency "jekyll", "~> 3.7" # shouldn't be the latest, due to github-pages compatibility
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.0'
   spec.add_runtime_dependency 'jekyll-autoprefixer', '~> 1.0'
 
