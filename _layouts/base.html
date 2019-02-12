@@ -23,13 +23,14 @@
 			{% include nav.html %}
 		</header>
 
-		<main role="main" class="container">
+		<main role="main" class="container rounded shadow-distinct">
 			<div class="content">
 				{{ content }}
 			</div>
 		</main>
 
 		<footer class="container">
+			{% include footer.html %}
 		</footer>
 
 	{% if site.google_analytics %}

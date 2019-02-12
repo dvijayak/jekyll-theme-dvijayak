@@ -6,16 +6,39 @@ $primary: #C6EAFA;
 $secondary: #DEDEDE;
 
 $blue: #069;
+$pre-color: $primary;
+$code-color: $primary;
+
+$link-color: $blue;
+
+$border-radius: 0.5rem !default;
 
 $enable-shadows: true;
+
 
 // Import bootstrap at the end in order to override default variables
 @import "bootstrap/bootstrap";
 
 // ---------- DVIJAYAK ----------
 
-$main-border-radius: 8px !default;
-$main-box-shadow: rgba($black, 0.2) 0 0 0 1px, rgba($black, 0.45) 0 3px 10px;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+// Extra convenience classes for colors
+@each $color, $value in $colors {
+  @include bg-variant(".bg-color-#{$color}", $value);
+  @include text-emphasis-variant(".text-color-#{$color}", $value);
+}
+@each $color, $value in $grays {
+  @include bg-variant(".bg-gray-#{$color}", $value);
+  @include text-emphasis-variant(".text-gray-#{$color}", $value);
+}
+
+$comfy-content-padding: 1.25rem !default;
+
+$box-shadow-distinct: rgba($black, 0.2) 0 0 0 1px, rgba($black, 0.45) 0 3px 10px !default;
+.shadow-distinct {
+	box-shadow: $box-shadow-distinct !important;
+}
 
 $navbar-brand-text-shadow: rgba(#fff, 0.9) 0 1px 0 !default;
 
@@ -33,24 +56,75 @@ body {
 }
 
 main {
-	background-color: $secondary;
-
-	@include border-radius($main-border-radius);
-	@include box-shadow($main-box-shadow);
+	// background-color: $secondary;
+	@include gradient-bg($secondary);
 
 	.content {
-		padding: 3rem 1.5rem;
+		padding: $comfy-content-padding*1.5 $comfy-content-padding;
 	}
 }
 
 footer {
-	padding: 20px 0 0;
+	padding: $comfy-content-padding 0 0;
 	color: #ccc; // TODO: Move this to variable
 }
 
-pre {
+pre, code {
+	@include border-radius();
+
 	background-color: $gray-800;
+	font-family: 'Roboto Mono', monospace;
 
 	white-space: pre-wrap;
 	overflow-x: auto;
+}
+
+pre {
+	padding: $comfy-content-padding;
+}
+
+:not(.highlight) > code {
+	@extend .p-1;
+}
+
+blockquote {
+	padding: $comfy-content-padding;
+	@include border-radius();
+
+	background: $gray-400;
+	@extend .text-muted;
+	@extend .font-italic;
+
+	cite {
+		&::before {
+			content: "\2013 \2002";
+		}
+	}
+}
+
+blockquote :last-child, // the last child CONTAINED by a blockquote
+.card:last-child // the last child of w/e THAT IS of class .card
+{
+	// Remove the margin from the very last element
+	@extend .mb-0;
+}
+
+.card {
+	.card-body {
+		@extend .pt-0; // cancel the top padding, making way for the card title background to fill up
+	}
+	.card-title, .card-subtitle {
+		margin-left: -$comfy-content-padding;
+		margin-right: -$comfy-content-padding;
+	}
+	.card-title {
+		padding: $comfy-content-padding;		
+	}
+	.card-subtitle {
+		margin: 0 -$comfy-content-padding;
+		padding: $comfy-content-padding/2 $comfy-content-padding;
+
+		background: $body-bg;
+		color: $secondary;
+	}
 }

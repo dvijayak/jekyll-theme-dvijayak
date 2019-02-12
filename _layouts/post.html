@@ -1,10 +1,9 @@
 ---
-layout: base
+layout: base-with-title
 ---
 
-<h1>{{ page.title }}</h1>
 <p>
-	<em>Published on {{ page.date | date_to_string }}</em>
+	<em class="text-muted">Published on {{ page.date | date_to_string }}</em>
 {% if page.composed_date %}
 	<br>
 	<em>Composed on {{ page.composed_date | date_to_string }}</em>

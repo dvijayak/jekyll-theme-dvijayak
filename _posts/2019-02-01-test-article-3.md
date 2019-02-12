@@ -7,6 +7,8 @@ tags: [one, two, three, four, infinity]
 > Lorem markdownum regesta referebat humo inplevit suis; *huic* qui mihi erratica.
 Nam relictis terris. *Laqueosque matris*? Mea deum a pondere membra, iussorum ad
 fugit per, certamina?<!--excerpt-->
+>
+> <cite>Source: [Dummy link](https://www.example.com)</cite>
 
 ``` javascript
     var dashboard_trackball_scan = software;
